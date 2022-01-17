@@ -1,23 +1,19 @@
 import React, { useState } from 'react';
 import Block from './components/Block';
 import StartButton from './components/StartButton';
+import './App.css';
+import './PlayerOne.css';
+import './PlayerTwo.css';
+
 
 function App() {
   const [startGameValue, setStartGameValue] = useState(false);
   const [p1Pressed, setP1Pressed] = useState(null);
   const [p2Pressed, setP2Pressed] = useState(null);
 
-  const playerOne = true;
-  const playerTwo = true;
-
-  // Control game and ai speed
-  let speed = 500;
-  let aiSpeed = speed;
-  let aiSpeedsArray = [500,100,1,0];
-  let speedIndex = 0;
-
-  let aiOn = false;
-  let draw = true;
+  // Determines styles and side
+  const playerOne = 'playerOne';
+  const playerTwo = 'playerTwo';
 
 
   const startGame = () => {
@@ -25,28 +21,11 @@ function App() {
   }
 
   const buttonPress = ({ keyCode }) => {
-    // Toggle A.i
-    if (keyCode === 8) {
-      aiOn = !aiOn;
-    }
-
-    // A.i speed change ++
-    if (keyCode === 187) {
-      speedIndex ++;
-      if (speedIndex > aiSpeedsArray.length) {
-        speedIndex = 0;
-      }
-      aiSpeed = aiSpeedsArray[speedIndex];
-      if (aiSpeed === 0) {
-        draw = false;
-      } else {
-        draw = true;
-      }
-    }
-    
+    window.addEventListener(keyCode)
     // Player One Move Buttons
     if (keyCode === 37 || keyCode === 39 || keyCode === 40 || keyCode === 38) {  
       setP1Pressed(keyCode);
+      
     }
     
     // Player Two Move buttons
@@ -57,24 +36,25 @@ function App() {
 
 
   return (
-    <div onKeyDown={e => buttonPress(e)}>
+ 
+    <div className="GameDiv" >
       <Block
         pPressed={p1Pressed}
         setP1Pressed={setP1Pressed}
-        playerOne={playerOne}
+        player={playerOne}
         startGameValue={startGameValue}
         setStartGameValue={setStartGameValue}
       />
       <Block
         pPressed={p2Pressed}
         setP2Pressed={setP2Pressed}
-        aiOn={aiOn}
-        playerTwo={playerTwo}
+        player={playerTwo}
         startGameValue={startGameValue}
         setStartGameValue={setStartGameValue}
       />
       <StartButton callback={startGame} />
     </div>
+
   );
 }
 

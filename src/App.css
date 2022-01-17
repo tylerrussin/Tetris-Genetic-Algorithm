@@ -1,0 +1,171 @@
+/* Common css classnames */
+
+.StartButton {
+  position: absolute;
+  width: 1036px;
+  height: 68px;
+  left: 0px;
+  top: 800px;
+
+  box-sizing: border-box;
+
+  margin: 0 0 20px 0;
+  padding: 20px;
+  min-height: 30px;
+  width: 100%;
+  border-radius: 20px;
+  border: none;
+  color: white;
+  background: #333;
+  font-family: Pixel, Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  text-align: center;
+  outline: none;
+  cursor: pointer;
+}
+
+.Blue {
+  color: #1DA1F2;
+}
+
+.Red {
+  color: #F21D1D;
+}
+
+.Black {
+  color: #000000;
+}
+
+.BackgroundWhite {
+  background: #FFFFFF;
+}
+
+.Rightous {
+  font-family: Righteous;
+  font-style: normal;
+  font-weight: normal;
+}
+
+.PieceShow {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  left: calc(50% - 80px/2 - 3.5px);
+  top: 47px;
+  }
+
+.PieceShowStage {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+}
+
+.NextPiece2 {
+  display: grid;
+  grid-template-columns: repeat(2, 18px);
+}
+
+.NextPiece3 {
+  display: grid;
+  grid-template-columns: repeat(3, 18px);
+}
+
+.NextPiece4 {
+  display: grid;
+  grid-template-columns: repeat(4, 18px);
+}
+
+.ZeroBox {
+  width: 30px;
+  height: 30px;
+
+  border: 1px solid #D0D0D0;
+  box-sizing: content-box;
+  border-radius: 10px;
+}
+
+.BabyBox {
+  width: 16px;
+  height: 16px;
+}
+
+.BabyBlueBox {
+  width: 16px;
+  height: 16px;
+
+  background: #1DA1F2;
+  border: 1px solid #000000;
+  box-sizing: content-box;
+  border-radius: 3px;
+}
+
+.BabyRedBox {
+  width: 16px;
+  height: 16px;
+
+  background: #F21D1D;
+  border: 1px solid #000000;
+  box-sizing: content-box;
+  border-radius: 3px;
+}
+
+.BlueBox {
+  width: 30px;
+  height: 30px;
+
+  background: #1DA1F2;
+  border: 1px solid #000000;
+  box-sizing: content-box;
+  border-radius: 10px;
+}
+
+.RedBox {
+  width: 30px;
+  height: 30px;
+
+  background: #F21D1D;
+  border: 1px solid #000000;
+  box-sizing: content-box;
+  border-radius: 10px;
+}
+
+/* Housing for entire game */
+
+.GameDiv {
+  position: absolute;
+  width: 1141px;
+  height: 766px;
+  left: calc(50% - 1141px/2 - 2.5px);
+  top: 5px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
