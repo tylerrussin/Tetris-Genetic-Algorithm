@@ -27,7 +27,7 @@ const Block = (props) => {
   const [ rowsClearedState, setRowsClearedState ] = useState(0);
   // const [ dropSpeed, setDropSpeed ] = useState(0);
   const [ movePattern, setMovePattern ] = useState({rotates: 0, lefts: 0, rights: 0});
-  const [ aiState, setAiState ] = useState({ on: false, training: false });
+  const [ aiState, setAiState ] = useState({ on: true, training: false });
   const dropSpeed = 150;
   const [ gameOver, setGameOver ] = useState(false);
  
@@ -189,9 +189,9 @@ const Block = (props) => {
               <div className="PlayerTwoRows Black Rightous">Rows Cleared</div>
               <div className="PlayerTwoRowsCount Red Rightous">{rowsClearedState}</div>
             </div>
-            {/* Debugging button */}
+            {/* Debugging buttons
             <button onClick={() => setAiState({ on: true, training: false })}>turn on ai</button>
-            <button onClick={() => setAiState({ on: false, training: true })}>start train</button>
+            <button onClick={() => setAiState({ on: false, training: true })}>start train</button> */}
           </div>
         </div>
       </div>
