@@ -14,9 +14,6 @@ import NextBlock from './NextBlock';
 import { useInterval } from '../hooks/useInterval';
 import { unstable_batchedUpdates } from 'react-dom';
 
-import Gamepad from "react-gamepad";
-
-
 const Block = (props) => {
   let gameState = [null];
 
@@ -136,7 +133,7 @@ const Block = (props) => {
     return (
       <div className="PlayerOneSide">
         <div className="PlayerOneTopHalf">
-          <div className="PlayerOneName Blue Rightous">Tyler</div>
+          <div className="PlayerOneName Blue Rightous">A.i.</div>
           <div className="PlayerOneScore Black Rightous">Score</div>
           <div className="PlayerOneScoreValue Blue Rightous">{scoreState}</div>
         </div>
@@ -200,50 +197,3 @@ const Block = (props) => {
 };
 
 export default Block;
-
-
-
-  // GamePad
-  // const [ gamePad, setGamePad ] = useState({x: false, left: false, right: false, down: false});
-  // useInterval(() => {
-  //   if (props.startGameValue === true) {
-
-  //     if (props.player === 'playerOne') {
-  //       if (navigator.getGamepads()[0] !== null) {
-  //         let buttonX = navigator.getGamepads()[0].buttons[0].touched;
-  //         let buttonLeft = navigator.getGamepads()[0].buttons[14].touched;
-  //         let buttonRight = navigator.getGamepads()[0].buttons[15].touched;
-  //         let buttonDown = navigator.getGamepads()[0].buttons[13].touched;
-
-  //         if (buttonX) {
-  //           setGamePad({x: true, left: false, right: false, down: false});
-  //         } else if (buttonLeft) {
-  //           setGamePad({x: false, left: true, right: false, down: false});
-  //         } else if (buttonRight) {
-  //           setGamePad({x: false, left: false, right: true, down: false});
-  //         } else if (buttonDown) {
-  //           setGamePad({x: false, left: false, right: false, down: true});
-  //         } else {
-  //           setGamePad({x: false, left: false, right: false, down: false});
-  //         }
-  //       } 
-  //     }      
-  //   }
-  // }, 0);
-
-  // useEffect(() => {
-  //   if (gamePad.x) {
-  //     renderRotateShape(props.player);
-  //   }
-  //   if (gamePad.left) {
-  //     renderMoveLeft(props.player);
-  //   }
-  //   if (gamePad.right) {
-  //     renderMoveRight(props.player);
-  //   }
-  //   if (gamePad.down) {
-  //     renderDrop(props.player);
-  //   }
-  //   refreshGame();
-    
-  // }, [gamePad.x, gamePad.left, gamePad.right, gamePad.down])

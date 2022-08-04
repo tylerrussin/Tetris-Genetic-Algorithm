@@ -1,5 +1,12 @@
 /* Common css classnames */
 
+@font-face {
+  font-family: "Righteous";   /*Can be any text*/
+  src: local("Righteous-Regular"),
+    url("fonts/Righteous-Regular.ttf") format("truetype");
+}
+
+
 .StartButton {
   position: absolute;
   width: 1036px;
