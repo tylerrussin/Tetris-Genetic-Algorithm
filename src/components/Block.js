@@ -133,7 +133,7 @@ const Block = (props) => {
     return (
       <div className="PlayerOneSide">
         <div className="PlayerOneTopHalf">
-          <div className="PlayerOneName Blue Rightous">A.i.</div>
+          <div className="PlayerOneName Blue Rightous">Test</div>
           <div className="PlayerOneScore Black Rightous">Score</div>
           <div className="PlayerOneScoreValue Blue Rightous">{scoreState}</div>
         </div>
